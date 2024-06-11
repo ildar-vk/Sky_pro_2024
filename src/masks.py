@@ -16,3 +16,4 @@ def get_mask_account(account_number):
     visible_digits = 4
     masked_number = "**" + account_number[-visible_digits:]
     return masked_number
+# изменение в Git

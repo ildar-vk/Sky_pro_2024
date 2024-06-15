@@ -16,3 +16,4 @@ def sort_by_date(data, reverse=True):
     :param reverse: второй необязательный задает порядок сортировки (убывание, возрастание).
     """
     return sorted(data, key=lambda x: x["date"], reverse=reverse)
+

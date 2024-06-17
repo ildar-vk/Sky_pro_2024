@@ -18,4 +18,4 @@ def get_mask_account(account_number:str)->str:
     return masked_number
 
 
-# изменение в Git 1
+

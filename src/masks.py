@@ -1,6 +1,8 @@
+
+
 def get_mask_card_number(card_number:str)->str:
     visible_digits = 6
-    masked_number = (
+    card_number = (
         card_number[:visible_digits]
         + " "
         + " ".join(
@@ -9,12 +11,12 @@ def get_mask_card_number(card_number:str)->str:
         + " "
         + card_number[-4:]
     )
-    return masked_number
+    return card_number
 
 
 def get_mask_account(account_number:str)->str:
     visible_digits = 4
-    masked_number = "**" + account_number[-visible_digits:]
-    return masked_number
+    account_number = "**" + account_number[-visible_digits:]
+    return account_number
 
 

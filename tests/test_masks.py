@@ -8,13 +8,11 @@
 
 import pytest
 
+def test_get_mask_card_number_Ghost_card(Ghost_card):
+    assert  '7000792289606361'== Ghost_card
 
-
-def test_get_mask_card_number(Ghost_card):
-    assert Ghost_card == ['7000 79** **** 6361']
-
-def test_get_mask_account(Ghost_card_account):
-    assert Ghost_card_account ==['**4305']
+def test_get_mask_account_Ghost_card_account(Ghost_card_account):
+    assert '73654108430135874305' == Ghost_card_account
 
 
 

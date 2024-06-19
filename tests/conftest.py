@@ -1,5 +1,8 @@
+import pytest
 @pytest.fixture
 def Ghost_card():
-    return ['7000792289606361']
+    return ['7000 79** **** 6361']
+
+@pytest.fixture
 def Ghost_card_account():
-    return ['73654108430135874305']
+    return ['**4305']

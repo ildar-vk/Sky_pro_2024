@@ -16,3 +16,4 @@ def test_mask_account_card():
     for data, expected_output in input_data:
         assert src.widget.mask_account_card(data) == expected_output
 
+

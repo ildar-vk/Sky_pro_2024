@@ -18,9 +18,9 @@ def mask_card(card_info:str)->str:
     return f"{card_type} {masked_number}"
 
 
-def mask_account_card(account_info:str)->str:
+def mask_account(account_info:str)->str:
     """Функция для преобразования номера карты"""
-    account_number = account_info.split(maxsplit=1)
+    _, account_number = account_info.split(maxsplit=1)
     masked_number = "**" + account_number[-4:]
     return f"Счет {masked_number}"
 

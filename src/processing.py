@@ -1,4 +1,4 @@
-def filter_by_state(data:list[dict], state="EXECUTED")->list[dict]:
+def filter_by_state(data: list[dict], state="EXECUTED") -> list[dict]:
     """
 
     :param data: в функцию в виде аргумента подается список словарей
@@ -10,11 +10,10 @@ def filter_by_state(data:list[dict], state="EXECUTED")->list[dict]:
     return [d for d in data if d.get("state") == state]
 
 
-def sort_by_date(data:list[dict], reverse=True)->list[dict]:
+def sort_by_date(data: list[dict], reverse=True) -> list[dict]:
     """
 
     :param data: в функцию в виде аргумента подается список словарей
     :param reverse: второй необязательный задает порядок сортировки (убывание, возрастание).
     """
     return sorted(data, key=lambda x: x["date"], reverse=reverse)
-

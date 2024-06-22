@@ -1,5 +1,4 @@
 import pytest
-
 import src.processing
 
 
@@ -32,8 +31,3 @@ def test_sort_by_date_sorted_date(Sorted_date):
             {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
         ]
     )
-
-
-# @pytest.mark.parametrize()
-# def test_filter_by_state(one,two):
-#     assert

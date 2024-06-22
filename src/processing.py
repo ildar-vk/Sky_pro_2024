@@ -1,3 +1,6 @@
+import pytest
+
+
 def filter_by_state(data: list[dict], state="EXECUTED") -> list[dict]:
     """
 

@@ -1,5 +1,6 @@
-import pytest
 from datetime import datetime
+
+import pytest
 
 
 def mask_account_card(input_string: str) -> str:

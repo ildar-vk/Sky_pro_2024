@@ -1,0 +1,71 @@
+Index: tests/test_masks.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/test_masks.py b/tests/test_masks.py
+deleted file mode 100644
+--- a/tests/test_masks.py	(revision 159f99f5c2406f4109aa98c203d4b915909882c9)
++++ /dev/null	(revision 159f99f5c2406f4109aa98c203d4b915909882c9)
+@@ -1,20 +0,0 @@
+-import pytest
+-
+-import src.masks
+-
+-
+-def test_get_mask_card_number_Ghost_card(Ghost_card):
+-    assert src.masks.get_mask_card_number("7000792289606361") == Ghost_card
+-
+-def test_get_mask_account_Ghost_card_account(Ghost_card_account):
+-    assert src.masks.get_mask_account('7000792289606361') == Ghost_card_account
+-
+-# def test_mask_number_length():
+-#     assert src.masks.get_mask_card_number("12345678901234567890") == "123456 ****** 7890"
+-#     assert src.masks.get_mask_card_number("98765") == "98765"
+-#
+-# def test_mask_number_invalid_input():
+-#     assert src.masks.get_mask_card_number("") is None
+-#     assert src.masks.get_mask_card_number("12345a6789012345") is None
+-
+-
+Index: tests/conftest.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/conftest.py b/tests/conftest.py
+deleted file mode 100644
+--- a/tests/conftest.py	(revision 159f99f5c2406f4109aa98c203d4b915909882c9)
++++ /dev/null	(revision 159f99f5c2406f4109aa98c203d4b915909882c9)
+@@ -1,9 +0,0 @@
+-import pytest
+-@pytest.fixture
+-def Ghost_card():
+-    return '7000 79** **** 6361'
+-
+-
+-@pytest.fixture
+-def Ghost_card_account():
+-    return '**6361'
+\ No newline at end of file
+Index: tests/tests_main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/tests_main.py b/tests/tests_main.py
+deleted file mode 100644
+--- a/tests/tests_main.py	(revision 159f99f5c2406f4109aa98c203d4b915909882c9)
++++ /dev/null	(revision 159f99f5c2406f4109aa98c203d4b915909882c9)
+@@ -1,5 +0,0 @@
+-def tests_one():
+-    1==1
+-
+-def new_changer():
+-    pass
+diff --git a/tests/test_widget.py b/tests/test_widget.py
+deleted file mode 100644
+diff --git a/tests/__init__.py b/tests/__init__.py
+deleted file mode 100644
+diff --git a/tests/test_processing.py b/tests/test_processing.py
+deleted file mode 100644

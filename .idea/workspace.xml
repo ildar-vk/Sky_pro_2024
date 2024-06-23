@@ -409,7 +409,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719165473569</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="23.06 Исправления &#10;⠀.idea удалил">
+      <option name="closed" value="true" />
+      <created>1719165827577</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1719165827577</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

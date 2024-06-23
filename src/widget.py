@@ -1,7 +1,5 @@
 from datetime import datetime
 
-import pytest
-
 
 def mask_account_card(input_string: str) -> str:
     """Функция обрабатывает строку и если строка начинается со слова Счет

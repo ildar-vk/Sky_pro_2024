@@ -1,0 +1,96 @@
+Index: tests/test_masks.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pytest\r\n\r\nimport src.masks\r\nfrom src.masks import get_mask_account, get_mask_card_number\r\n\r\ndef test_get_mask_card_number_Ghost_card(Ghost_card):\r\n    assert src.masks.get_mask_card_number(\"7000792289606361\") == Ghost_card\r\n\r\ndef test_get_mask_account_Ghost_card_account(Ghost_card_account):\r\n    assert src.masks.get_mask_account('7000792289606361') == Ghost_card_account\r\n\r\n# def test_mask_number_length():\r\n#     assert src.masks.get_mask_card_number(\"12345678901234567890\") == \"123456 ****** 7890\"\r\n#     assert src.masks.get_mask_card_number(\"98765\") == \"98765\"\r\n#\r\n# def test_mask_number_invalid_input():\r\n#     assert src.masks.get_mask_card_number(\"\") is None\r\n#     assert src.masks.get_mask_card_number(\"12345a6789012345\") is None\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/test_masks.py b/tests/test_masks.py
+--- a/tests/test_masks.py	(revision 82743732c95f1480ff2448b9762168b369e2cf3b)
++++ b/tests/test_masks.py	(date 1718846947188)
+@@ -9,12 +9,12 @@
+ def test_get_mask_account_Ghost_card_account(Ghost_card_account):
+     assert src.masks.get_mask_account('7000792289606361') == Ghost_card_account
+ 
+-# def test_mask_number_length():
+-#     assert src.masks.get_mask_card_number("12345678901234567890") == "123456 ****** 7890"
+-#     assert src.masks.get_mask_card_number("98765") == "98765"
+-#
+-# def test_mask_number_invalid_input():
+-#     assert src.masks.get_mask_card_number("") is None
+-#     assert src.masks.get_mask_card_number("12345a6789012345") is None
++def test_mask_number_length():
++    assert src.masks.get_mask_card_number("7000792289606361") == "7000 79** **** 6361"
++    assert src.masks.get_mask_card_number("98765") == "98765"
++
++def test_mask_number_invalid_input():
++    assert src.masks.get_mask_card_number("") is None
++    assert src.masks.get_mask_card_number("12345a6789012345") is None
+ 
+ 
+Index: tests/conftest.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pytest\r\n@pytest.fixture\r\ndef Ghost_card():\r\n    return '7000 79** **** 6361'\r\n\r\n\r\n@pytest.fixture\r\ndef Ghost_card_account():\r\n    return '**6361'
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/conftest.py b/tests/conftest.py
+--- a/tests/conftest.py	(revision 82743732c95f1480ff2448b9762168b369e2cf3b)
++++ b/tests/conftest.py	(date 1718847688045)
+@@ -1,9 +1,9 @@
+ import pytest
+ @pytest.fixture
+ def Ghost_card():
+-    return '7000 79** **** 6361'
++    return '**4305'
+ 
+ 
+ @pytest.fixture
+ def Ghost_card_account():
+-    return '**6361'
+\ No newline at end of file
++    return ''
+\ No newline at end of file
+Index: src/masks.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n\r\ndef get_mask_card_number(card_number:str)->str:\r\n    visible_digits = 6\r\n    card_number = (\r\n        card_number[:visible_digits]\r\n        + \" \"\r\n        + \" \".join(\r\n            [\"**\" if i < visible_digits + 2 else \"****\" for i in range(visible_digits, len(card_number) - 4, 4)]\r\n        )\r\n        + \" \"\r\n        + card_number[-4:]\r\n    )\r\n    return card_number\r\n\r\n\r\ndef get_mask_account(account_number:str)->str:\r\n    visible_digits = 4\r\n    account_number = \"**\" + account_number[-visible_digits:]\r\n    return account_number\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/masks.py b/src/masks.py
+--- a/src/masks.py	(revision 82743732c95f1480ff2448b9762168b369e2cf3b)
++++ b/src/masks.py	(date 1718847907637)
+@@ -1,22 +1,18 @@
+ 
+-
+-def get_mask_card_number(card_number:str)->str:
++def mask_card_number(card_number):
+     visible_digits = 6
+-    card_number = (
+-        card_number[:visible_digits]
+-        + " "
+-        + " ".join(
+-            ["**" if i < visible_digits + 2 else "****" for i in range(visible_digits, len(card_number) - 4, 4)]
+-        )
+-        + " "
+-        + card_number[-4:]
+-    )
+-    return card_number
++    masked_number = card_number[:visible_digits] + ' ' + ' '.join(['**' if i < visible_digits+2 else '****' for i in range(visible_digits, len(card_number)-4, 4)]) + ' ' + card_number[-4:]
++    return masked_number
+ 
+ 
+ def get_mask_account(account_number:str)->str:
++    ''' Функция принимает на вход аргумент функции
++
++    :param account_number:
++    :return:
++    '''
+     visible_digits = 4
+     account_number = "**" + account_number[-visible_digits:]
+-    return account_number
++    return masked_number
+ 
+ 

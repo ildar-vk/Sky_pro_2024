@@ -1,0 +1,15 @@
+Index: src/widget.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from datetime import datetime\r\n\r\n\r\ndef mask_account_card(input_string):\r\n    \"\"\"Функция обрабатывает строку и если строка начинается со слова Счет\r\n    по передает её для обработки в функцию mask_card с параметром в виде аргумента\r\n    функции mask_account, если нет то в функцию mask_card(input_string)\"\"\"\r\n    if input_string.startswith(\"Счет\"):\r\n        return mask_account(input_string)\r\n    else:\r\n        return mask_card(input_string)\r\n\r\n\r\ndef mask_card(card_info):\r\n    \"\"\"Функция для преобразования номера счета\"\"\"\r\n    card_type, card_number = card_info.split(maxsplit=1)\r\n    masked_number = card_number[:4] + \" **\" + \" **** \" + card_number[-4:]\r\n    return f\"{card_type} {masked_number}\"\r\n\r\n\r\ndef mask_account(account_info):\r\n    \"\"\"Функция для преобразования номера карты\"\"\"\r\n    _, account_number = account_info.split(maxsplit=1)\r\n    masked_number = \"**\" + account_number[-4:]\r\n    return f\"Счет {masked_number}\"\r\n\r\n\r\ndef convert_date_format(input_date):\r\n    \"\"\"Функция преобразования даты\"\"\"\r\n    date_obj = datetime.strptime(input_date, \"%Y-%m-%dT%H:%M:%S.%f\")\r\n    return date_obj.strftime(\"%d.%m.%Y\")\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/widget.py b/src/widget.py
+--- a/src/widget.py	(revision 66ed1e97eff7fdc3ba3d3ad3948536afbd74f972)
++++ b/src/widget.py	(date 1718157600452)
+@@ -29,3 +29,4 @@
+     """Функция преобразования даты"""
+     date_obj = datetime.strptime(input_date, "%Y-%m-%dT%H:%M:%S.%f")
+     return date_obj.strftime("%d.%m.%Y")
++

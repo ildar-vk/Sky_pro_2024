@@ -154,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_masks" />
         <item itemvalue="Python tests.Python tests for test_widget.test_mask_account_card" />
         <item itemvalue="Python tests.Python tests for test_processing.test_sort_by_date_sorted_date" />
         <item itemvalue="Python tests.Python tests for test_processing.test_filter_by_state_sorted_list" />
         <item itemvalue="Python tests.Python tests for test_masks.test_get_mask_card_number_Ghost_card" />
+        <item itemvalue="Python.test_masks" />
       </list>
     </recent_temporary>
   </component>

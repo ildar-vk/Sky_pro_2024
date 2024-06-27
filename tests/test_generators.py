@@ -1,6 +1,4 @@
-from src.generators import filter_by_currency, transaction_descriptions,card_number_generator
-
-
+from src.generators import filter_by_currency, transaction_descriptions, card_number_generator
 
 def test_filter_by_currency():
     transactions = [
@@ -13,7 +11,6 @@ def test_filter_by_currency():
     assert filtered_transactions[0]["description"] == "Transaction 1"
     assert filtered_transactions[1]["description"] == "Transaction 3"
 
-
 def test_transaction_descriptions():
     transactions = [
         {"description": "Transaction 1"},
@@ -23,7 +20,6 @@ def test_transaction_descriptions():
     descriptions = list(transaction_descriptions(transactions))
     assert len(descriptions) == 3
     assert descriptions == ["Transaction 1", "Transaction 2", "Transaction 3"]
-
 
 def test_card_number_generator():
     card_numbers = list(card_number_generator(1234567890123456, 1234567890123460))

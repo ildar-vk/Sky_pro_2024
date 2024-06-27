@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0660e39-a7de-435c-b7ec-53863fd4740a" name="Changes" comment="23.06 Исправления &#10;⠀.gitignore удален снова">
-      <change afterPath="$PROJECT_DIR$/src/generators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_generators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pythonProject5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_06_2024_6_58_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_06_2024_6_58__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_06_2024_8_20_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_06_2024_8_20__Changes_.xml" beforeDir="false" />
+    <list default="true" id="f0660e39-a7de-435c-b7ec-53863fd4740a" name="Changes" comment="27.06 Исправления тестов импорт">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generators.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/generators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_generators.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_generators.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,10 +58,12 @@
     "Python tests.Python tests for test_widget.test_et_data_Out_date.executor": "Run",
     "Python tests.Python tests for test_widget.test_mask_account_card.executor": "Run",
     "Python tests.Python tests for test_widget.test_mask_account_card_param.executor": "Run",
+    "Python tests.pytest for test_generators.test_card_number_generator.executor": "Run",
     "Python tests.pytest for test_generators.test_filter_by_currency.executor": "Run",
     "Python tests.pytest for test_generators.test_transaction_descriptions.executor": "Run",
     "Python tests.pytest for test_masks.test_get_mask_account_Ghost_card_account.executor": "Run",
     "Python.conftest.executor": "Run",
+    "Python.generators.executor": "Run",
     "Python.masks.executor": "Run",
     "Python.processing.executor": "Run",
     "Python.widget.executor": "Run",
@@ -83,20 +79,27 @@
       <recent name="C:\Users\Professional\Desktop\my_prj\pythonProject5\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_generators.test_transaction_descriptions">
-    <configuration name="Python tests for test_masks.test_get_mask_card_number_Ghost_card" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.pytest for test_generators.test_filter_by_currency">
+    <configuration name="generators" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject5" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_masks.test_get_mask_card_number_Ghost_card&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/generators.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests for test_processing.test_filter_by_state_sorted_list" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -114,7 +117,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_processing.test_sort_by_date_sorted_date" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_generators.test_card_number_generator" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="pythonProject5" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -124,8 +127,10 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_processing.test_sort_by_date_sorted_date&quot;" />
+      <option name="_new_target" value="&quot;test_generators.test_card_number_generator&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -165,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_generators.test_transaction_descriptions" />
         <item itemvalue="Python tests.pytest for test_generators.test_filter_by_currency" />
+        <item itemvalue="Python tests.pytest for test_generators.test_card_number_generator" />
+        <item itemvalue="Python tests.pytest for test_generators.test_transaction_descriptions" />
+        <item itemvalue="Python.generators" />
         <item itemvalue="Python tests.Python tests for test_processing.test_filter_by_state_sorted_list" />
-        <item itemvalue="Python tests.Python tests for test_masks.test_get_mask_card_number_Ghost_card" />
-        <item itemvalue="Python tests.Python tests for test_processing.test_sort_by_date_sorted_date" />
       </list>
     </recent_temporary>
   </component>
@@ -501,7 +506,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719388979507</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="27.06 Исправления">
+      <option name="closed" value="true" />
+      <created>1719514660113</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1719514660113</updated>
+    </task>
+    <task id="LOCAL-00041" summary="27.06 Исправления тестов импорт">
+      <option name="closed" value="true" />
+      <created>1719515132455</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1719515132455</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -526,8 +547,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Судя по условию домашки нужно сделать так." />
-    <MESSAGE value="homework 10_1 down" />
     <MESSAGE value="Предварительный, не форматированный код." />
     <MESSAGE value="Сначало прогнал flake8 и mypy (коммит не создался, видимо из за того что в коде не было изменений), далее прогнала black код реструктурировался и удалось создать коммит. Остался isort." />
     <MESSAGE value="Добавил во все функции /src аннатацию типов согласно требованиям по входным и вызодным данным.&#10;Не прогонял flake8,...,...,...,...." />
@@ -551,6 +570,8 @@
     <MESSAGE value="23.06 Исправления &#10;надеюсь последнее" />
     <MESSAGE value="23.06 Исправления &#10;⠀.gitignore" />
     <MESSAGE value="23.06 Исправления &#10;⠀.gitignore удален снова" />
-    <option name="LAST_COMMIT_MESSAGE" value="23.06 Исправления &#10;⠀.gitignore удален снова" />
+    <MESSAGE value="27.06 Исправления" />
+    <MESSAGE value="27.06 Исправления тестов импорт" />
+    <option name="LAST_COMMIT_MESSAGE" value="27.06 Исправления тестов импорт" />
   </component>
 </project>

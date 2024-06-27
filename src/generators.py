@@ -1,4 +1,5 @@
 
+
 def filter_by_currency(transactions, currency):
     if isinstance(transactions, list):
         for transaction in transactions:

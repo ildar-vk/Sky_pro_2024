@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0660e39-a7de-435c-b7ec-53863fd4740a" name="Changes" comment="23.06 Исправления &#10;⠀.gitignore удален снова" />
+    <list default="true" id="f0660e39-a7de-435c-b7ec-53863fd4740a" name="Changes" comment="23.06 Исправления &#10;⠀.gitignore удален снова">
+      <change afterPath="$PROJECT_DIR$/src/generators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_generators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pythonProject5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_06_2024_6_58_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_06_2024_6_58__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_06_2024_8_20_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_06_2024_8_20__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,57 +53,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for test_masks.test_get_mask_account_Ghost_card_account.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_masks.test_get_mask_card_number.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_masks.test_get_mask_card_number_Ghost_card.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_masks.test_mask_number_length.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_processing.test_filter_by_state_sorted_list.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_processing.test_sort_by_date_sorted_date.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_widget.test_et_data_Out_date.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_widget.test_mask_account_card.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_widget.test_mask_account_card_param.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_masks.test_get_mask_account_Ghost_card_account.executor&quot;: &quot;Run&quot;,
-    &quot;Python.conftest.executor&quot;: &quot;Run&quot;,
-    &quot;Python.masks.executor&quot;: &quot;Run&quot;,
-    &quot;Python.processing.executor&quot;: &quot;Run&quot;,
-    &quot;Python.widget.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/homework__10__2&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Professional/Desktop/my_prj/pythonProject/sky/sky&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_masks.test_get_mask_account_Ghost_card_account.executor": "Run",
+    "Python tests.Python tests for test_masks.test_get_mask_card_number.executor": "Run",
+    "Python tests.Python tests for test_masks.test_get_mask_card_number_Ghost_card.executor": "Run",
+    "Python tests.Python tests for test_masks.test_mask_number_length.executor": "Run",
+    "Python tests.Python tests for test_processing.test_filter_by_state_sorted_list.executor": "Run",
+    "Python tests.Python tests for test_processing.test_sort_by_date_sorted_date.executor": "Run",
+    "Python tests.Python tests for test_widget.test_et_data_Out_date.executor": "Run",
+    "Python tests.Python tests for test_widget.test_mask_account_card.executor": "Run",
+    "Python tests.Python tests for test_widget.test_mask_account_card_param.executor": "Run",
+    "Python tests.pytest for test_generators.test_filter_by_currency.executor": "Run",
+    "Python tests.pytest for test_generators.test_transaction_descriptions.executor": "Run",
+    "Python tests.pytest for test_masks.test_get_mask_account_Ghost_card_account.executor": "Run",
+    "Python.conftest.executor": "Run",
+    "Python.masks.executor": "Run",
+    "Python.processing.executor": "Run",
+    "Python.widget.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/homework__10__2",
+    "last_opened_file_path": "C:/Users/Professional/Desktop/my_prj/Битый 5 проект/pythonProject5",
+    "settings.editor.selected.configurable": "reference.settingsdialog.textmate.bundles"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Professional\Desktop\my_prj\pythonProject5\tests" />
       <recent name="C:\Users\Professional\Desktop\my_prj\pythonProject5\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_masks">
-    <configuration name="test_masks" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pythonProject5" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_masks.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.pytest for test_generators.test_transaction_descriptions">
     <configuration name="Python tests for test_masks.test_get_mask_card_number_Ghost_card" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="pythonProject5" />
       <option name="ENV_FILES" value="" />
@@ -137,7 +129,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_widget.test_mask_account_card" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_generators.test_filter_by_currency" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="pythonProject5" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -147,18 +139,37 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_widget.test_mask_account_card&quot;" />
+      <option name="_new_target" value="&quot;test_generators.test_filter_by_currency&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_generators.test_transaction_descriptions" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject5" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_generators.test_transaction_descriptions&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_widget.test_mask_account_card" />
-        <item itemvalue="Python tests.Python tests for test_processing.test_sort_by_date_sorted_date" />
+        <item itemvalue="Python tests.pytest for test_generators.test_transaction_descriptions" />
+        <item itemvalue="Python tests.pytest for test_generators.test_filter_by_currency" />
         <item itemvalue="Python tests.Python tests for test_processing.test_filter_by_state_sorted_list" />
         <item itemvalue="Python tests.Python tests for test_masks.test_get_mask_card_number_Ghost_card" />
-        <item itemvalue="Python.test_masks" />
+        <item itemvalue="Python tests.Python tests for test_processing.test_sort_by_date_sorted_date" />
       </list>
     </recent_temporary>
   </component>
@@ -482,7 +493,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719198566147</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="23.06 Исправления &#10;⠀.gitignore удален снова">
+      <option name="closed" value="true" />
+      <created>1719388979507</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1719388979507</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

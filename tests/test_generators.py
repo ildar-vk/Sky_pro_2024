@@ -1,6 +1,6 @@
-
 import src.generators
-from src.generators import filter_by_currency
+
+
 
 transactions=(
     [

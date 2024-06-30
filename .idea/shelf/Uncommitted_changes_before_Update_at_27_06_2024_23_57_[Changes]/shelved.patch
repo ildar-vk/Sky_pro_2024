@@ -1,0 +1,16 @@
+Index: tests/test_generators.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import src.generators\r\n\r\n\r\n\r\ndef test_filter_by_currency():\r\n    transactions = [\r\n        {\"operationAmount\": {\"currency\": {\"code\": \"USD\"}}, \"description\": \"Transaction 1\"},\r\n        {\"operationAmount\": {\"currency\": {\"code\": \"EUR\"}}, \"description\": \"Transaction 2\"},\r\n        {\"operationAmount\": {\"currency\": {\"code\": \"USD\"}}, \"description\": \"Transaction 3\"}\r\n    ]\r\n    filtered_transactions = list(filter_by_currency(transactions, \"USD\"))\r\n    assert len(filtered_transactions) == 2\r\n    assert filtered_transactions[0][\"description\"] == \"Transaction 1\"\r\n    assert filtered_transactions[1][\"description\"] == \"Transaction 3\"\r\n\r\n\r\ndef test_transaction_descriptions():\r\n    transactions = [\r\n        {\"description\": \"Transaction 1\"},\r\n        {\"description\": \"Transaction 2\"},\r\n        {\"description\": \"Transaction 3\"},\r\n    ]\r\n    descriptions = list(transaction_descriptions(transactions))\r\n    assert len(descriptions) == 3\r\n    assert descriptions == [\"Transaction 1\", \"Transaction 2\", \"Transaction 3\"]\r\n\r\n\r\ndef test_card_number_generator():\r\n    card_numbers = list(card_number_generator(1234567890123456, 1234567890123460))\r\n    assert len(card_numbers) == 5\r\n    assert card_numbers == [\r\n        \"1234 5678 9012 3456\",\r\n        \"1234 5678 9012 3457\",\r\n        \"1234 5678 9012 3458\",\r\n        \"1234 5678 9012 3459\",\r\n        \"1234 5678 9012 3460\",\r\n    ]\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/test_generators.py b/tests/test_generators.py
+--- a/tests/test_generators.py	(revision 3701081bf61ce58a2a5364df8d722c01ef50d6c5)
++++ b/tests/test_generators.py	(date 1719514674952)
+@@ -1,4 +1,4 @@
+-import src.generators
++import src.gener
+ 
+ 
+ 

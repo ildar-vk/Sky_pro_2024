@@ -1,5 +1,6 @@
 
 import src.generators
+from src.generators import filter_by_currency
 
 transactions=(
     [
@@ -61,7 +62,8 @@ transactions=(
             },
             "description": "Перевод с карты на карту",
             "from": "Visa Classic 6831982476737658",
-            "to": "Visa Platinum 8990922113665229"
+            "to": "Visa Platinum 899092211"
+                  "665229"
         },
         {
             "id": 594226727,

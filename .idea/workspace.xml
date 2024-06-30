@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0660e39-a7de-435c-b7ec-53863fd4740a" name="Changes" comment="27.06 Переписал тесты но pytest выдает ош" />
+    <list default="true" id="f0660e39-a7de-435c-b7ec-53863fd4740a" name="Changes" comment="27.06 Переписал тесты но pytest выдает ош">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generators.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/generators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_generators.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_generators.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="feature/homework_10_2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,9 +68,9 @@
     "Python.processing.executor": "Run",
     "Python.widget.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/homework__10__2",
+    "git-widget-placeholder": "feature/homework__11.1",
     "last_opened_file_path": "C:/Users/Professional/Desktop/my_prj/Битый 5 проект/pythonProject5",
-    "settings.editor.selected.configurable": "reference.settingsdialog.textmate.bundles"
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -75,7 +79,7 @@
       <recent name="C:\Users\Professional\Desktop\my_prj\pythonProject5\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_generators.test_transaction_descriptions">
+  <component name="RunManager" selected="Python tests.pytest for test_generators.test_filter_by_currency">
     <configuration name="Python tests for test_processing.test_filter_by_state_sorted_list" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="pythonProject5" />
       <option name="ENV_FILES" value="" />
@@ -161,20 +165,13 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_generators.test_transaction_descriptions" />
-        <item itemvalue="Python tests.pytest for test_generators.test_card_number_generator" />
         <item itemvalue="Python tests.pytest for test_generators.test_filter_by_currency" />
         <item itemvalue="Python tests.pytest in test_generators.py" />
+        <item itemvalue="Python tests.pytest for test_generators.test_transaction_descriptions" />
+        <item itemvalue="Python tests.pytest for test_generators.test_card_number_generator" />
         <item itemvalue="Python tests.Python tests for test_processing.test_filter_by_state_sorted_list" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

@@ -15,3 +15,4 @@ def test_add_log_file():
         last_log = logs[-1].strip()
         expected_log = "Function 'add' was called. Result: -6."
         assert last_log == expected_log
+

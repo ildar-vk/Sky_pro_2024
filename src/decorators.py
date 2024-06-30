@@ -1,4 +1,12 @@
 def log(filename):
+    """
+    Декоратор log логирует вызовы функций в файл или в консоль.
+
+    filename (str): Необязательный аргумент. Имя файла для логирования. Если не указан, логи выводятся в консоль.
+
+    wrapper: Обернутая функция с логированием.
+    """
+
     def decorator(func):
         def wrapper(*args, **kwargs):
             result = func(*args, **kwargs)

@@ -8,8 +8,11 @@ def log(filename):
                 with open(filename, "a") as file:
                     file.write(f"Function '{func.__name__}' was called. Result: {result}.\n")
             return result
+
         return wrapper
+
     return decorator
+
 
 @log("log.txt")
 def add(a, b):

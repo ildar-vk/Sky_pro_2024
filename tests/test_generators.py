@@ -80,3 +80,14 @@ def test_card_number_generator():
         "1234 5678 9012 3459",
         "1234 5678 9012 3460",
     ]
+
+def test_filter_by_currency():
+    transactions = [
+        {"operationAmount": {"currency": {"code": "USD"}}, "description": "Transaction 1"},
+        {"operationAmount": {"currency": {"code": "EUR"}}, "description": "Transaction 2"},
+        {"operationAmount": {"currency": {"code": "USD"}}, "description": "Transaction 3"}
+    ]
+    filtered_transactions = list(src.generators.filter_by_currency(transactions, "USD"))
+    assert len(filtered_transactions) == 2
+    assert filtered_transactions[0]["description"] == "Transaction 1"
+    assert filtered_transactions[1]["description"] == "Transaction 3"

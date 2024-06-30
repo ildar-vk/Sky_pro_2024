@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0660e39-a7de-435c-b7ec-53863fd4740a" name="Changes" comment="30.06 Переписал тесты но pytest выдает ош">
+    <list default="true" id="f0660e39-a7de-435c-b7ec-53863fd4740a" name="Changes" comment="30.06 ДЗ 11_2 разобрался в чем была проблема. Редактировал нужный проект а вызывал одноименный проект в терминале. НУЖНО БЫТЬ ВНИМАТЕЛЬНЕЕ!!!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/generators.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/generators.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/homework_10_2" />
+        <entry key="$PROJECT_DIR$" value="feature/homework_11.2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -539,7 +541,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719721486471</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="30.06 ДЗ 11_2 разобрался в чем была проблема. Редактировал нужный проект а вызывал одноименный проект в терминале. НУЖНО БЫТЬ ВНИМАТЕЛЬНЕЕ!!!">
+      <option name="closed" value="true" />
+      <created>1719729594845</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1719729594845</updated>
+    </task>
+    <task id="LOCAL-00046" summary="30.06 ДЗ 11_2 разобрался в чем была проблема. Редактировал нужный проект а вызывал одноименный проект в терминале. НУЖНО БЫТЬ ВНИМАТЕЛЬНЕЕ!!!">
+      <option name="closed" value="true" />
+      <created>1719729725646</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1719729725646</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -564,7 +582,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="testы не работают фиксатуры. Нет понимания где рбрабатываются функции &#10;Ведь входные значениия пишутся в фиксатурах а результат работы функции сравнивается в тестах как аргумент фиксатуры и результат обработки теста. Писать что фиксатура входная уже равна результату теста бред" />
     <MESSAGE value="Поправил домашку" />
     <MESSAGE value="перный тест отрабатывает весь блок тестов и сответственно вывовдит ош." />
     <MESSAGE value="remove" />
@@ -589,6 +606,7 @@
     <MESSAGE value="27.06 Исправления тестов импорт_1" />
     <MESSAGE value="27.06 Переписал тесты но pytest выдает ош" />
     <MESSAGE value="30.06 Переписал тесты но pytest выдает ош" />
-    <option name="LAST_COMMIT_MESSAGE" value="30.06 Переписал тесты но pytest выдает ош" />
+    <MESSAGE value="30.06 ДЗ 11_2 разобрался в чем была проблема. Редактировал нужный проект а вызывал одноименный проект в терминале. НУЖНО БЫТЬ ВНИМАТЕЛЬНЕЕ!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="30.06 ДЗ 11_2 разобрался в чем была проблема. Редактировал нужный проект а вызывал одноименный проект в терминале. НУЖНО БЫТЬ ВНИМАТЕЛЬНЕЕ!!!" />
   </component>
 </project>

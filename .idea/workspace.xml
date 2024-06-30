@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0660e39-a7de-435c-b7ec-53863fd4740a" name="Changes" comment="30.06 ДЗ 11_2 #">
-      <change beforePath="$PROJECT_DIR$/tests/test_decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_decorators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/decorators.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +78,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "feature/homework__11.2",
     "last_opened_file_path": "C:/Users/Professional/Desktop/my_prj/Crash_project/pythonProject5",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -183,8 +185,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_decorators" />
         <item itemvalue="Python.decorators" />
+        <item itemvalue="Python.test_decorators" />
         <item itemvalue="Python tests.pytest in test_decorators.py" />
         <item itemvalue="Python tests.pytest for test_decorators.test_log_without_file" />
         <item itemvalue="Python tests.pytest for test_decorators.test_log_error_with_file" />
@@ -206,14 +208,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718025648019</updated>
-    </task>
-    <task id="LOCAL-00002" summary="homework 10_1 down">
-      <option name="closed" value="true" />
-      <created>1718485487842</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1718485487842</updated>
     </task>
     <task id="LOCAL-00003" summary="Предварительный, не форматированный код.">
       <option name="closed" value="true" />
@@ -599,7 +593,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719741567826</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="30.06 ДЗ 11_2 #">
+      <option name="closed" value="true" />
+      <created>1719741709066</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1719741709066</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

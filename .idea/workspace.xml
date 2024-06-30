@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0660e39-a7de-435c-b7ec-53863fd4740a" name="Changes" comment="30.06 после удаления Charm">
-      <change afterPath="$PROJECT_DIR$/.idea/pythonProject5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/.coverage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_06_2024_7_00__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_06_2024_7_00__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_06_2024_23_57__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_06_2024_23_57__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+    <list default="true" id="f0660e39-a7de-435c-b7ec-53863fd4740a" name="Changes" comment="30.06 ДЗ 11_2">
       <change beforePath="$PROJECT_DIR$/src/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_decorators.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -600,7 +591,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719726605076</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="30.06 ДЗ 11_2">
+      <option name="closed" value="true" />
+      <created>1719741126731</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1719741126731</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -648,8 +647,8 @@
     <MESSAGE value="27.06 Исправления тестов импорт_1" />
     <MESSAGE value="27.06 Переписал тесты но pytest выдает ош" />
     <MESSAGE value="30.06 Переписал тесты но pytest выдает ош" />
-    <MESSAGE value="30.06 ДЗ 11_2" />
     <MESSAGE value="30.06 после удаления Charm" />
-    <option name="LAST_COMMIT_MESSAGE" value="30.06 после удаления Charm" />
+    <MESSAGE value="30.06 ДЗ 11_2" />
+    <option name="LAST_COMMIT_MESSAGE" value="30.06 ДЗ 11_2" />
   </component>
 </project>

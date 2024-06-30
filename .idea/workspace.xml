@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0660e39-a7de-435c-b7ec-53863fd4740a" name="Changes" comment="30.06 Переписал тесты но pytest выдает ош">
-      <change beforePath="$PROJECT_DIR$/src/generators.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/generators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_generators.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_generators.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -539,7 +540,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719721486471</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="30.06 Переписал тесты но pytest выдает ош">
+      <option name="closed" value="true" />
+      <created>1719722469214</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1719722469214</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

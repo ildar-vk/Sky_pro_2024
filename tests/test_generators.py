@@ -1,8 +1,32 @@
 import src.generators
 
 
+def test_filter_by_currency():
+    filtered_transactions = list(src.generators.filter_by_currency(transactions, "USD"))
+    assert len(filtered_transactions) == 3
+    assert filtered_transactions[0]["description"] == "Перевод организации"
+    assert filtered_transactions[1]["description"] == "Перевод со счета на счет"
 
-transactions=(
+
+def test_transaction_descriptions():
+    descriptions = list(src.generators.transaction_descriptions(transactions))
+    assert len(descriptions) == 5
+    assert descriptions == ['Перевод организации', 'Перевод со счета на счет', 'Перевод со счета на счет',
+                            'Перевод с карты на карту', 'Перевод организации']
+
+
+def test_card_number_generator():
+    card_numbers = list(src.generators.card_number_generator(1234567890123456, 1234567890123460))
+    assert len(card_numbers) == 5
+    assert card_numbers == [
+        "1234 5678 9012 3456",
+        "1234 5678 9012 3457",
+        "1234 5678 9012 3458",
+        "1234 5678 9012 3459",
+        "1234 5678 9012 3460",
+    ]
+
+transactions = (
     [
         {
             "id": 939719570,
@@ -82,30 +106,5 @@ transactions=(
         }
     ]
 )
-def test_filter_by_currency():
-
-    filtered_transactions = list(src.generators.filter_by_currency(transactions, "USD"))
-    assert len(filtered_transactions) == 3
-    assert filtered_transactions[0]["description"] == "Перевод организации"
-    assert filtered_transactions[1]["description"] == "Перевод со счета на счет"
-
-def test_transaction_descriptions():
-
-    descriptions = list(src.generators.transaction_descriptions(transactions))
-    assert len(descriptions) == 5
-    assert descriptions == ['Перевод организации', 'Перевод со счета на счет', 'Перевод со счета на счет', 'Перевод с карты на карту', 'Перевод организации']
-
-def test_card_number_generator():
-    card_numbers = list(src.generators.card_number_generator(1234567890123456, 1234567890123460))
-    assert len(card_numbers) == 5
-    assert card_numbers == [
-        "1234 5678 9012 3456",
-        "1234 5678 9012 3457",
-        "1234 5678 9012 3458",
-        "1234 5678 9012 3459",
-        "1234 5678 9012 3460",
-    ]
-
-
 
 

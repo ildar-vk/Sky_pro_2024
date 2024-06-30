@@ -4,13 +4,17 @@ def currency_filter(currency):
             for transaction in func(transactions):
                 if transaction["operationAmount"]["currency"]["code"] == currency:
                     yield transaction
+
         return wrapper
+
     return decorator
+
 
 @currency_filter("USD")
 def filter_by_currency(transactions):
     for transaction in transactions:
         yield transaction
+
 
 def transaction_descriptions(transactions):
     for transaction in transactions:

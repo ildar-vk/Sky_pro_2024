@@ -1,28 +1,20 @@
-def currency_filter(currency):
+def log(filename):
     def decorator(func):
-        def wrapper(transactions):
-            for transaction in func(transactions):
-                if transaction["operationAmount"]["currency"]["code"] == currency:
-                    yield transaction
+        def wrapper(*args, **kwargs):
+            currency = "USD"
+            result = func(*args, **kwargs)
+            with open(filename, "a") as file:
+                file.write(f"Function '{func.__name__}' was called. Result: {result}. Currency: {currency}\n")
+            return result
 
         return wrapper
 
     return decorator
 
 
-@currency_filter("USD")
-def filter_by_currency(transactions):
-    for transaction in transactions:
-        yield transaction
+@log("log.txt")
+def add(a, b):
+    return a + b
 
 
-def transaction_descriptions(transactions):
-    for transaction in transactions:
-        yield transaction["description"]
-
-
-def card_number_generator(start, end):
-    for num in range(start, end + 1):
-        yield "{:04d} {:04d} {:04d} {:04d}".format(
-            (num // 10**12) % 10**4, (num // 10**8) % 10**4, (num // 10**4) % 10**4, num % 10**4
-        )
+print(add(2, 3))

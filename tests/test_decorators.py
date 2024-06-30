@@ -1,34 +1,21 @@
-def currency_filter(currency):
-    def decorator(func):
-        def wrapper(transactions):
-            for transaction in func(transactions):
-                if transaction["operationAmount"]["currency"]["code"] == currency:
-                    yield transaction
-
-        return wrapper
-
-    return decorator
+import src.decorators
 
 
-# Функция, которую мы будем тестировать
-@currency_filter("USD")
-def filter_by_currency(transactions):
-    for transaction in transactions:
-        yield transaction
+def test_log_file_creation():
+    with open("log.txt", "w") as file:
+        file.write("Initial content")  # Создаем начальное содержимое файла
+    src.decorators.add(2, 3)  # Вызываем функцию add
+    with open("log.txt", "r") as file:
+        content = file.read()
+        if "Function 'add' was called." in content:
+            print("Test Passed: Log file creation test")
+        else:
+            print("Test Failed: Log file creation test")
 
 
-# Тестирование декоратора
-def test_currency_filter():
-    transactions = [
-        {"operationAmount": {"currency": {"code": "USD"}, "amount": 100}},
-        {"operationAmount": {"currency": {"code": "EUR"}, "amount": 50}},
-        {"operationAmount": {"currency": {"code": "USD"}, "amount": 75}},
-    ]
-
-    filtered_transactions = list(filter_by_currency(transactions))
-
-    # Проверяем, что остались только транзакции с валютой USD
-    assert len(filtered_transactions) == 2
-    # Проверяем суммы транзакций
-    assert filtered_transactions[0]["operationAmount"]["amount"] == 100
-    assert filtered_transactions[1]["operationAmount"]["amount"] == 75
+def test_add_functionality():
+    result = src.decorators.add(2, 3)
+    if result == 5:
+        print("Test Passed: Add functionality test")
+    else:
+        print("Test Failed: Add functionality test")

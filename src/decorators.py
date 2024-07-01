@@ -1,4 +1,4 @@
-def log(filename):
+def log(filename=None):
     """
     Декоратор log логирует вызовы функций в файл или в консоль.
 
@@ -9,22 +9,29 @@ def log(filename):
 
     def decorator(func):
         def wrapper(*args, **kwargs):
-            result = func(*args, **kwargs)
-            if filename is None:
-                print(f"Function '{func.__name__}' was called. Result: {result}.")
-            else:
-                with open(filename, "a") as file:
-                    file.write(f"Function '{func.__name__}' was called. Result: {result}.\n")
-            return result
+            try:
+                result = func(*args, **kwargs)
+                if filename is None:
+                    print(f"Function '{func.__name__}' ok \n")
+                else:
+                    with open(filename, "a") as file:
+                        file.write(f"Function '{func.__name__}' ok \n")
+                    return result
+            except Exception as Err:
+                if filename is None:
+                    print(f"Function '{func.__name__}'  = {Err} of {args or kwargs}  \n")
+
+                else:
+                    with open(filename, "a") as file:
+                        file.write(f"Function '{func.__name__}' = {Err} of {args or kwargs} \n")
+                raise
+
 
         return wrapper
 
     return decorator
 
 
-@log("log.txt")
+@log('log.txt')
 def add(a, b):
-    return a + b
-
-
-print(add(2, -8))
+    return a / b

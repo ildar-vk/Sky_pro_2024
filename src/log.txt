@@ -1,0 +1,4 @@
+Function 'add' was called. Result: 5. Currency: USD
+Function 'add' = division by zero of (2, 0) 
+Function 'add' ok 
+Function 'add' = division by zero of (2, 0) 

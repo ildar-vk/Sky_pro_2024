@@ -1,8 +1,8 @@
 def log(filename=None):
     """
     Декоратор log логирует вызовы функций в файл или в консоль.
-
     """
+
     def decorator(func):
         def wrapper(*args, **kwargs):
             try:
@@ -22,15 +22,8 @@ def log(filename=None):
                         file.write(f"Function '{func.__name__}' = {Err} of {args or kwargs} \n")
                 raise
 
-
         return wrapper
 
     return decorator
 
 
-# @log("log.txt")
-# def add(a, b):
-#     return a / b
-#
-#
-# print(add(2,0))

@@ -2,11 +2,7 @@ def log(filename=None):
     """
     Декоратор log логирует вызовы функций в файл или в консоль.
 
-    filename (str): Необязательный аргумент. Имя файла для логирования. Если не указан, логи выводятся в консоль.
-
-    wrapper: Обернутая функция с логированием.
     """
-
     def decorator(func):
         def wrapper(*args, **kwargs):
             try:
@@ -32,6 +28,9 @@ def log(filename=None):
     return decorator
 
 
-@log('log.txt')
-def add(a, b):
-    return a / b
+# @log("log.txt")
+# def add(a, b):
+#     return a / b
+#
+#
+# print(add(2,0))

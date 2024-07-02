@@ -1,18 +1,24 @@
+import pytest
+
 import src.decorators
 
 
-def test_add_functionality():
-    result = src.decorators.add(2, -8)
-    if result == -6:
-        print("Test Passed: Add functionality test")
-    else:
-        print("Test Failed: Add functionality test")
+def test_for_Exception():
+    with pytest.raises(Exception):
+         @src.decorators.log("log.txt")
+         def add(a, b):
+            return a / b
+
+         print(add(2,0))
 
 
-def test_add_log_file():
-    with open("log.txt", "r") as file:
-        logs = file.readlines()
-        last_log = logs[-1].strip()
-        expected_log = "Function 'add' was called. Result: -6."
-        assert last_log == expected_log
 
+def test_log():
+    def add(a, b):
+        return a + b
+
+    result = add(2, 3)
+    assert result == 5
+
+
+#

@@ -8,7 +8,7 @@ import src.decorators
 def test_for_Exception():
     with pytest.raises(Exception):
 
-        @src.decorators.log("log.txt")
+        @src.decorators.log("test_log.txt")
         def add(a, b):
             return a / b
 
@@ -30,11 +30,11 @@ def test_log_file():
             os.remove(filename)
 
         with open(filename, 'w') as file:
-            file.write("Function 'add' = division by zero of (2, 0)")
+            file.write("Test is good")
 
         with open(filename, 'r') as file:
             content = file.read()
-            if content == "Function 'add' = division by zero of (2, 0)":
+            if content == "Test is good":
                 print('File content is correct')
 
     except FileNotFoundError:

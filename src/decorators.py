@@ -37,11 +37,11 @@ def log(filename: str | None = None) -> Callable:
             try:
                 result = func(*args, **kwargs)
             except Exception as e:
-                msg = f"'{func.__name__}'error : {str(e)} Inputs:{args or kwargs}"
+                msg = f"{func.__name__} error: {e}. Inputs: {args}, {kwargs}"
                 _log(msg)  # Передает эту строку в функцию _log для записи в журнал или обработки.
                 raise
             else:
-                msg = f"Function '{func.__name__}' ok"
+                msg = f"{func.__name__} ok"
                 _log(msg)  # Передает эту строку в функцию _log для записи в журнал или обработки.
                 return result
 

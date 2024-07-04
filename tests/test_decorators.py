@@ -1,4 +1,3 @@
-
 from src.decorators import log
 
 
@@ -12,8 +11,9 @@ def test_log_prints_to_console():
     # Проверяем вывод на консоль
     print("Test passed: log prints to console")
 
+
 def test_log_writes_to_file():
-    filename = 'test.log'
+    filename = "test.log"
 
     @log(filename)
     def test_function():
@@ -29,6 +29,7 @@ def test_log_writes_to_file():
         else:
             print("Test failed: log does not write to file")
 
+
 def test_log_exception_handling():
     @log()
     def error_function():
@@ -41,4 +42,3 @@ def test_log_exception_handling():
         print(f"Test passed: log handles exceptions - {e}")
     else:
         print("Test failed: log does not handle exceptions")
-

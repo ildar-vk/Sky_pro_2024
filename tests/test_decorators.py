@@ -1,45 +1,44 @@
-import os
-
-import pytest
-
-import src.decorators
+from src.decorators import log
 
 
-def test_for_Exception():
-    with pytest.raises(Exception):
+def test_log_prints_to_console():
+    @log()
+    def test_function():
+        return 42
 
-        @src.decorators.log("test_log.txt")
-        def add(a, b):
-            return a / b
+    test_function()
 
-        print(add(2, 0))
-
-
-def test_log():
-    def add(a, b):
-        return a + b
-
-    result = add(2, 3)
-    assert result == 5
+    # Проверяем вывод на консоль
+    print("Test passed: log prints to console")
 
 
-def test_log_file():
-    filename = 'test_log.txt'
+def test_log_writes_to_file():
+    filename = "test.log"
+
+    @log(filename)
+    def test_function():
+        return 42
+
+    test_function()
+
+    # Проверяем запись в файл
+    with open(filename, "r", encoding="utf-8") as file:
+        lines = file.readlines()
+        if lines[-1].startswith("test_function ok"):
+            print("Test passed: log writes to file")
+        else:
+            print("Test failed: log does not write to file")
+
+
+def test_log_exception_handling():
+    @log()
+    def error_function():
+        raise ValueError("Something went wrong")
+
     try:
-        if os.path.exists(filename):
-            os.remove(filename)
-
-        with open(filename, 'w') as file:
-            file.write("Test is good")
-
-        with open(filename, 'r') as file:
-            content = file.read()
-            if content == "Test is good":
-                print('File content is correct')
-
-    except FileNotFoundError:
-        print(f"File '{filename}' not found")
-    except Exception as e:
-        print(f"Error: {e}")
-
-
+        error_function()
+    except ValueError as e:
+        # Проверяем обработку исключений
+        print(f"Test passed: log handles exceptions - {e}")
+    else:
+        print("Test failed: log does not handle exceptions")

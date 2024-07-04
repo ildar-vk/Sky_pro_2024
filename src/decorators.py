@@ -1,29 +1,33 @@
-def log(filename=None):
-    """
-    Декоратор log логирует вызовы функций в файл или в консоль.
-    """
+from functools import wraps
+from typing import Callable, Any
 
-    def decorator(func):
-        def wrapper(*args, **kwargs):
+def log(filename: str | None = None) -> Callable:
+
+    def _log(msg: str) -> None:
+        if filename is None:
+            print(msg)
+        else:
+            with open(filename, "a", encoding="utf-8") as file:
+                file.write(msg + '\n')
+
+    def decorator(func: Callable) -> Callable:
+
+        @wraps(func)
+        def wrapper(*args: Any, **kwargs: Any) -> Any:
             try:
                 result = func(*args, **kwargs)
-                if filename is None:
-                    print(f"Function '{func.__name__}' ok \n")
-                else:
-                    with open(filename, "a") as file:
-                        file.write(f"Function '{func.__name__}' ok \n")
-                    return result
-            except Exception as Err:
-                if filename is None:
-                    print(f"Function '{func.__name__}'  = {Err} of {args or kwargs}  \n")
-
-                else:
-                    with open(filename, "a") as file:
-                        file.write(f"Function '{func.__name__}' = {Err} of {args or kwargs} \n")
+            except Exception as e:
+                msg = f"'{func.__name__}'error : {str(e)} Inputs:{args or kwargs}"
+                _log(msg)
                 raise
+            else:
+                msg = f"Function '{func.__name__}' ok"
+                _log(msg)
+                return result
 
         return wrapper
 
     return decorator
+
 
 

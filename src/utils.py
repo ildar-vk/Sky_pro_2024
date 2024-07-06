@@ -1,5 +1,7 @@
 import json
 
+import src
+
 
 def input_json(file_json):
     try:
@@ -19,4 +21,10 @@ def input_json(file_json):
          print("Файл не найден")
          return empty_list
 
-print(input_json('C:\\Users\\Professional\\PycharmProjects\\Sky_pro_2024_1\\data\\operations.json'))
+def input_transaction(transaction):
+    if transaction in ['USD', 'EUR']:
+        # Вызов внешнего API для обработки транзакции
+        amount = src.external_api(transaction)
+        return amount
+    else:
+        return "Unsupported currency"

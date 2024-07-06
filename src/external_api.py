@@ -1,3 +1,5 @@
+
+
 import os
 from dotenv import load_dotenv
 import requests
@@ -8,16 +10,25 @@ load_dotenv()
 # Получение значения переменной GITHUB_TOKEN из .env-файла
 github_token = os.getenv('GITHUB_TOKEN')
 
-# Создание заголовка с токеном доступа API
-headers = {
-    'Authorization': f'token {github_token}'
-}
+# Проверка наличия токена
+if github_token:
+    # Создание заголовка с токеном доступа API
+    headers = {'Authorization': f'token {github_token}'}
 
-# Отправка GET-запроса к API
-response = requests.get('https://api.github.com/user', headers=headers)
+    # Параметры запроса для API Layer
+    params = {'to': 'USD', 'from': 'EUR', 'amount': 100}
 
-# Обработка ответа
-print(response.json())
+    # Отправка GET-запроса к API Layer
+    response = requests.get('https://api.apilayer.com/exchangerates_data/convert', headers=headers, params=params)
+
+    # Проверка статуса запроса
+    if response.status_code == 200:
+        # Обработка ответа
+        print(response.json())
+    else:
+        print(f"Ошибка при выполнении запроса: {response.status_code}")
+else:
+    print("Токен отсутствует")
 
 # import requests
 #

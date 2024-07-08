@@ -1,6 +1,7 @@
 import json
 
 import src
+from src.external_api import convert_currency
 
 
 def input_json(file_json):
@@ -21,10 +22,15 @@ def input_json(file_json):
          print("Файл не найден")
          return empty_list
 
-def input_transaction(transaction):
-    if transaction in ['USD', 'EUR']:
-        # Вызов внешнего API для обработки транзакции
-        amount = src.external_api(transaction)
-        return amount
+def process_transaction(file_json):
+    amount = file_json['amount']
+    currency = file_json['currency']
+
+    if currency in ['USD', 'EUR']:
+        amount_rub = convert_currency(amount, currency)
     else:
-        return "Unsupported currency"
+        amount_rub = amount
+
+    return amount_rub
+
+

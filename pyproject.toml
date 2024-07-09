@@ -9,6 +9,8 @@ readme = "README.md"
 python = "^3.12"
 pytest = "^8.2.2"
 generators = "^2020.4.27"
+requests = "^2.32.3"
+python-dotenv = "^1.0.1"
 
 
 [tool.poetry.group.dev.dependencies]

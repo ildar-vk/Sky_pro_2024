@@ -2,7 +2,15 @@ import json
 
 from src.external_api import convert_currency
 
+
 def input_json(file_json):
+    """
+    Это определение функции input_json,
+    которая принимает  аргумент: file_json (файл с данными о финансовых транзациях)
+    и возвращает список словарей с данными о финансовых транзакциях.
+    Если файл пустой, содержит не список или не найден,
+    функция возвращает пустой список.
+    """
     try:
         with open(file_json, "r", encoding="utf-8") as file:
             content = file.read()
@@ -31,5 +39,3 @@ def process_transaction(file_json):
         amount_rub = amount
 
     return amount_rub
-
-

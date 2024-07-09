@@ -1,8 +1,6 @@
 import json
 
-import src
 from src.external_api import convert_currency
-
 
 def input_json(file_json):
     try:
@@ -33,3 +31,5 @@ def process_transaction(file_json):
         amount_rub = amount
 
     return amount_rub
+
+

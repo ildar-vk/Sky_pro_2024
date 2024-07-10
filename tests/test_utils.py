@@ -3,18 +3,18 @@ import unittest
 from unittest.mock import patch
 
 from src.external_api import convert_currency
-from src.utils import process_transaction
+from src.external_api import process_transaction
 
 
 def test_input_json():
-    filename = "operation.json"
+    filename = "C:\\Users\Professional\PycharmProjects\Sky_pro_2024_1\data\operation.json"
     try:
         with open(filename, "r", encoding="utf-8") as file:
             content = file.read()
             if "[" not in content and "]" not in content:
                 print("Файл не содержит списков")
             else:
-                with open(filename, encoding="utf-8") as f:
+                with open(filename, "s", encoding="utf-8") as f:
                     data = json.load(f)
                     print(data)
     except FileNotFoundError:
@@ -31,8 +31,7 @@ class TestConvertCurrency(unittest.TestCase):
         self.assertEqual(converted_amount, 75.0)
 
 
-if __name__ == "__main__":
-    unittest.main()
+
 
 
 class TestProcessTransaction(unittest.TestCase):

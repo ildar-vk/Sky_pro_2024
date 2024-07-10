@@ -3,6 +3,7 @@ import os
 import requests
 
 
+
 def convert_currency(amount, currency):
     """
     Это определение функции convert_currency,
@@ -19,3 +20,14 @@ def convert_currency(amount, currency):
     data = response.json()
 
     return data["result"]
+
+def process_transaction(file_json):
+    amount = file_json["amount"]
+    currency = file_json["currency"]
+
+    if currency in ["USD", "EUR"]:
+        amount_rub = convert_currency(amount, currency)
+    else:
+        amount_rub = amount
+
+    return amount_rub

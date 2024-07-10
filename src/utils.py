@@ -1,6 +1,6 @@
 import json
 
-from src.external_api import convert_currency
+
 
 
 def input_json(file_json):
@@ -29,13 +29,4 @@ def input_json(file_json):
         return empty_list
 
 
-def process_transaction(file_json):
-    amount = file_json["amount"]
-    currency = file_json["currency"]
 
-    if currency in ["USD", "EUR"]:
-        amount_rub = convert_currency(amount, currency)
-    else:
-        amount_rub = amount
-
-    return amount_rub

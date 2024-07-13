@@ -27,6 +27,8 @@ def input_json(file_json):
         empty_list = []
         print("Файл не найден")
         return empty_list
-
+    except json.JSONDecodeError:
+        print("Ошибка декодирования JSON")
+        return []
 
 

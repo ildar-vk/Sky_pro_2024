@@ -1,12 +1,14 @@
+
+import logging
 import json
 
-
-
+logging.basicConfig(filename='logs/utils.log', level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger_utils = logging.getLogger('utils')
 
 def input_json(file_json):
     """
     Это определение функции input_json,
-    которая принимает  аргумент: file_json (файл с данными о финансовых транзациях)
+    которая принимает аргумент: file_json (файл с данными о финансовых транзакциях)
     и возвращает список словарей с данными о финансовых транзакциях.
     Если файл пустой, содержит не список или не найден,
     функция возвращает пустой список.
@@ -15,20 +17,18 @@ def input_json(file_json):
         with open(file_json, "r", encoding="utf-8") as file:
             content = file.read()
             if "[" not in content and "]" not in content:
-                print("Файл не содержит списков")
+                logger_utils.error("Файл не содержит списков")
                 empty_list = []
                 return empty_list
             else:
                 with open(file_json, encoding="utf-8") as f:
                     data = json.load(f)
-                    print("Файл со списками")
+                    logger_utils.info("Файл со списками")
                 return data
     except FileNotFoundError:
+        logger_utils.error("Файл не найден")
         empty_list = []
-        print("Файл не найден")
         return empty_list
     except json.JSONDecodeError:
-        print("Ошибка декодирования JSON")
+        logger_utils.error("Ошибка декодирования JSON")
         return []
-
-

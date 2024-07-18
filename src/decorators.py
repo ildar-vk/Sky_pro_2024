@@ -1,6 +1,5 @@
-from functools import wraps
-from typing import Any, Callable
 
+import logging
 """
 from functools import wraps: Импортирует функцию wraps из модуля functools.
 wraps используется для копирования метаданных
@@ -11,7 +10,7 @@ Callable используется для определения типа фун�
 """
 
 
-def log(filename: str | None = None) -> Callable:
+def log(filename: str | None = None):
 
     def _log(msg: str) -> None:
         """Объявляет вспомогательную функцию _log, которая принимает строку msg и не возвращает ничего (None).
@@ -25,7 +24,7 @@ def log(filename: str | None = None) -> Callable:
 
     def decorator(func: Callable) -> Callable:
         """
-        Декоратор @wraps(func)
+            Декоратор @wraps(func)
         используется для обновления метаданных обернутой функции wrapper с метаданными функции func.
         """
 
@@ -48,3 +47,16 @@ def log(filename: str | None = None) -> Callable:
         return wrapper
 
     return decorator
+
+
+
+def logger_masks(func):
+    logging.basicConfig(filename='C:\\Users\\Professional\\PycharmProjects\\Sky_pro_2024_1\\logs\\masks.log',
+                        level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',filemode='w')
+    logger = logging.getLogger('masks')
+    def wrapper(*args, **kwargs):
+        logger.info(f"Function {func.__name__} called with args: {args}, kwargs: {kwargs}")
+        result = func(*args, **kwargs)
+        logger.info(f"Function {func.__name__} returned: {result}")
+        return result
+    return wrapper

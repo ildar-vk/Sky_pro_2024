@@ -1,4 +1,0 @@
-2024-07-18 07:41:10,695 - masks - INFO - Function get_mask_card_number called with args: ('1234567890123456',), kwargs: {}
-2024-07-18 07:41:10,695 - masks - INFO - Function get_mask_card_number returned: 1234 56** **** 3456
-2024-07-18 07:41:10,695 - masks - INFO - Function get_mask_account called with args: ('9876543210',), kwargs: {}
-2024-07-18 07:41:10,696 - masks - INFO - Function get_mask_account returned: **3210

@@ -1,10 +1,7 @@
 
-import logging
 import json
-
-logging.basicConfig(filename='logs/utils.log', level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-logger_utils = logging.getLogger('utils')
-
+from src.decorators import logger_utils
+@logger_utils
 def input_json(file_json):
     """
     Это определение функции input_json,
@@ -32,3 +29,5 @@ def input_json(file_json):
     except json.JSONDecodeError:
         logger_utils.error("Ошибка декодирования JSON")
         return []
+
+

@@ -1,6 +1,8 @@
-
 import json
+
 from src.decorators import logger_utils
+
+
 @logger_utils
 def input_json(file_json):
     """
@@ -29,5 +31,3 @@ def input_json(file_json):
     except json.JSONDecodeError:
         logger_utils.error("Ошибка декодирования JSON")
         return []
-
-

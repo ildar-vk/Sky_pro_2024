@@ -1,5 +1,5 @@
 import logging
-
+from functools import wraps
 """
 from functools import wraps: Импортирует функцию wraps из модуля functools.
 wraps используется для копирования метаданных
@@ -71,13 +71,14 @@ def logger_masks(func):
 
     return wrapper
 
+
 def logger_utils(func):
     logging.basicConfig(
-        filename='C:\\Users\\Professional\\PycharmProjects\\Sky_pro_2024_1\\logs\\utils.log',
+        filename="C:\\Users\\Professional\\PycharmProjects\\Sky_pro_2024_1\\logs\\utils.log",
         level=logging.INFO,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    logger_utils = logging.getLogger('utils')
-
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    )
+    logger_utils = logging.getLogger("utils")
 
     def wrapper(*args, **kwargs):
         logger_utils.info(f"Function {func.__name__} called with args: {args}, kwargs: {kwargs}")

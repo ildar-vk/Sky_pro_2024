@@ -1,5 +1,6 @@
 import json
 
+
 from src.decorators import logger_utils
 
 
@@ -13,17 +14,26 @@ def input_json(file_json):
     функция возвращает пустой список.
     """
     try:
-        with open(file_json, "r", encoding="utf-8") as file:
-            content = file.read()
-            if "[" not in content and "]" not in content:
-                logger_utils.error("Файл не содержит списков")
-                empty_list = []
-                return empty_list
-            else:
-                with open(file_json, encoding="utf-8") as f:
-                    data = json.load(f)
-                    logger_utils.info("Файл со списками")
+        if file_path.endswith(".json"):
+            with open(file_path, "r", encoding="utf-8") as file:
+                data = json.load(file)
+                logger_utils.info("Прочитан файл JSON")
                 return data
+        elif file_path.endswith(".csv"):
+            data = []
+            with open(file_path, newline="", encoding="utf-8") as file:
+                csv_reader = csv.DictReader(file)
+                for row in csv_reader:
+                    data.append(row)
+            logger_utils.info("Прочитан файл CSV")
+            return data
+        elif file_path.endswith(".xlsx"):
+            data = pd.read_excel(file_path).to_dict(orient="records")
+            logger_utils.info("Прочитан файл XLSX")
+            return data
+        else:
+            logger_utils.error("Неподдерживаемый формат файла")
+            return []
     except FileNotFoundError:
         logger_utils.error("Файл не найден")
         empty_list = []
@@ -31,3 +41,7 @@ def input_json(file_json):
     except json.JSONDecodeError:
         logger_utils.error("Ошибка декодирования JSON")
         return []
+    except Exception as e:
+        # Здесь можно добавить дополнительные действия, если это необходимо
+        logger_utils.error(f"Произошла ошибка: {e}")
+        raise

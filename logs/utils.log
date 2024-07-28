@@ -1,0 +1,7 @@
+2024-07-22 01:21:25,439 - utils - INFO - Function input_json called with args: ('file.json',), kwargs: {}
+2024-07-22 01:21:32,385 - utils - INFO - Function input_json called with args: ('file.json',), kwargs: {}
+2024-07-22 01:59:57,297 - utils - INFO - Function input_data called with args: ('data.json',), kwargs: {}
+2024-07-22 02:01:02,985 - utils - INFO - Function input_data called with args: ('data.json',), kwargs: {}
+2024-07-22 02:03:39,008 - utils - INFO - Function input_data called with args: ('data.json',), kwargs: {}
+2024-07-22 02:25:16,641 - utils - INFO - Function input_data called with args: ('data.json',), kwargs: {}
+2024-07-22 02:28:57,411 - utils - INFO - Function input_data called with args: ('data.operations.json',), kwargs: {}

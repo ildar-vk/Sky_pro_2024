@@ -1,11 +1,11 @@
 import json
 
-
+import pandas as pd
 from src.decorators import logger_utils
 
 
 @logger_utils
-def input_json(file_json):
+def input_data(file_path):
     """
     Это определение функции input_json,
     которая принимает аргумент: file_json (файл с данными о финансовых транзакциях)
@@ -45,3 +45,14 @@ def input_json(file_json):
         # Здесь можно добавить дополнительные действия, если это необходимо
         logger_utils.error(f"Произошла ошибка: {e}")
         raise
+
+
+# Проверка работы функции с различными форматами файлов
+json_data = input_data("data.json")
+print(json_data)
+
+csv_data = input_data("data.csv")
+print(csv_data)
+
+xlsx_data = input_data("data.xlsx")
+print(xlsx_data)

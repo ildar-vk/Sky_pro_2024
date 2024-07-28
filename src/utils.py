@@ -44,3 +44,5 @@ def input_data(file_path):
     except Exception as e:
         logger_utils.error(f"Произошла ошибка: {e}")
         raise
+
+

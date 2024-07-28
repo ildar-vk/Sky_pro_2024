@@ -31,3 +31,4 @@ def process_transaction(file_json):
         amount_rub = amount
 
     return amount_rub
+

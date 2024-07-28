@@ -1,18 +1,17 @@
-import csv
 import json
 
-import pandas as pd
 
 from src.decorators import logger_utils
 
 
 @logger_utils
-def input_data(file_path):
+def input_json(file_json):
     """
-    Функция input_data принимает аргумент file_path (путь к файлу с данными о финансовых транзакциях) и
-    возвращает список словарей с данными о финансовых транзакциях.
-    Если файл пустой, содержит не список или не найден, функция возвращает пустой список.
-    Поддерживаемые форматы: JSON, CSV, XLSX.
+    Это определение функции input_json,
+    которая принимает аргумент: file_json (файл с данными о финансовых транзакциях)
+    и возвращает список словарей с данными о финансовых транзакциях.
+    Если файл пустой, содержит не список или не найден,
+    функция возвращает пустой список.
     """
     try:
         if file_path.endswith(".json"):
@@ -37,6 +36,10 @@ def input_data(file_path):
             return []
     except FileNotFoundError:
         logger_utils.error("Файл не найден")
+        empty_list = []
+        return empty_list
+    except json.JSONDecodeError:
+        logger_utils.error("Ошибка декодирования JSON")
         return []
     except Exception as e:
         # Здесь можно добавить дополнительные действия, если это необходимо

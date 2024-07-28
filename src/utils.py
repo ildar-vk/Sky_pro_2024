@@ -2,7 +2,7 @@ import csv
 import json
 
 
-import pandas as pd
+#import pandas as pd
 
 from src.decorators import logger_utils
 

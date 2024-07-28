@@ -1,8 +1,7 @@
 import csv
 import json
 
-
-#import pandas as pd
+import pandas as pd
 
 from src.decorators import logger_utils
 
@@ -40,7 +39,6 @@ def input_data(file_path):
         logger_utils.error("Файл не найден")
         return []
     except Exception as e:
+        # Здесь можно добавить дополнительные действия, если это необходимо
         logger_utils.error(f"Произошла ошибка: {e}")
         raise
-
-

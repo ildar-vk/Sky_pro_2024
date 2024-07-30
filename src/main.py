@@ -14,7 +14,7 @@ def main():
         choice = input("Ваш выбор: ")
 
         if choice == '1':
-            file_path = os.path.join('data', '1.json')
+            file_path = os.path.join('data', 'transactions1.json')
             transactions = input_data(file_path)
         elif choice == '2':
             file_path = os.path.join('data', 'transactions.csv')
@@ -73,4 +73,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+   main()

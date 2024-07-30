@@ -72,18 +72,30 @@ def logger_masks(func):
     return wrapper
 
 
+import logging
+
+
 def logger_utils(func):
+    # Настройка логирования
     logging.basicConfig(
         filename="C:\\Users\\Professional\\PycharmProjects\\Sky_pro_2024_1\\logs\\utils.log",
         level=logging.INFO,
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     )
-    logger_utils = logging.getLogger("utils")
+
+    # Получаем логгер
+    logger = logging.getLogger("utils")
+
+    # Отключаем вывод логов в консоль
+    for handler in logging.root.handlers[:]:
+        logging.root.removeHandler(handler)
 
     def wrapper(*args, **kwargs):
-        logger_utils.info(f"Function {func.__name__} called with args: {args}, kwargs: {kwargs}")
+        logger.info(f"Function {func.__name__} called with args: {args}, kwargs: {kwargs}")
         result = func(*args, **kwargs)
-        logger_utils.info(f"Function {func.__name__} returned: {result}")
+        logger.info(f"Function {func.__name__} returned: {result}")
         return result
 
     return wrapper
+
+

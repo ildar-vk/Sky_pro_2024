@@ -1,6 +1,7 @@
 import os
-from src.utils import input_data
-from src.utils import filter_transactions_by_description
+from collections import Counter
+
+from src.utils import filter_transactions_by_description, input_data
 
 
 def main():
@@ -13,48 +14,52 @@ def main():
 
         choice = input("Ваш выбор: ")
 
-        if choice == '1':
-            file_path = os.path.join('data', 'transactions1.json')
+        if choice == "1":
+            file_path = os.path.join("data", "transactions1.json")
             transactions = input_data(file_path)
-        elif choice == '2':
-            file_path = os.path.join('data', 'transactions.csv')
+        elif choice == "2":
+            file_path = os.path.join("data", "transactions.csv")
             transactions = input_data(file_path)
-        elif choice == '3':
-            file_path = os.path.join('data', 'transactions.xlsx')
+        elif choice == "3":
+            file_path = os.path.join("data", "transactions.xlsx")
             transactions = input_data(file_path)
         else:
             print("Неверный выбор. Пожалуйста, попробуйте снова.")
             continue
 
         while True:
-            status = input(
-                "Введите статус, по которому необходимо выполнить фильтрацию.\n"
-                "Доступные для фильтровки статусы: EXECUTED, CANCELED, PENDING\n"
-                "Ваш статус: "
-            ).strip().upper()
+            status = (
+                input(
+                    "Введите статус, по которому необходимо выполнить фильтрацию.\n"
+                    "Доступные для фильтровки статусы: EXECUTED, CANCELED, PENDING\n"
+                    "Ваш статус: "
+                )
+                .strip()
+                .upper()
+            )
 
-            if status in {'EXECUTED', 'CANCELED', 'PENDING'}:
+            if status in {"EXECUTED", "CANCELED", "PENDING"}:
                 print(f"Операции отфильтрованы по статусу '{status}'.")
-                filtered_transactions = [t for t in transactions if t['status'].upper() == status]
+                filtered_transactions = [t for t in transactions if t["status"].upper() == status]
                 break
             else:
                 print(f'Статус операции "{status}" недоступен.')
 
         sort_choice = input("Отсортировать операции по дате? Да/Нет: ").strip().lower()
-        if sort_choice == 'да':
+        if sort_choice == "да":
             order_choice = input("Отсортировать по возрастанию или по убыванию? ").strip().lower()
-            reverse = order_choice == 'по убыванию'
-            filtered_transactions.sort(key=lambda x: x['date'], reverse=reverse)
+            reverse = order_choice == "по убыванию"
+            filtered_transactions.sort(key=lambda x: x["date"], reverse=reverse)
 
         currency_choice = input("Выводить только рублевые транзакции? Да/Нет: ").strip().lower()
-        if currency_choice == 'да':
-            filtered_transactions = [t for t in filtered_transactions if t['currency'] == 'RUB']
+        if currency_choice == "да":
+            filtered_transactions = [t for t in filtered_transactions if t["currency"] == "RUB"]
 
-        word_filter_choice = input(
-            "Отфильтровать список транзакций по определенному слову в описании? Да/Нет: "
-        ).strip().lower()
+        word_filter_choice = (
+            input("Отфильтровать список транзакций по определенному слову в описании? Да/Нет: ").strip().lower()
+        )
 
-        if word_filter_choice == 'да':
+        if word_filter_choice == "да":
             search_string = input("Введите слово для поиска: ")
             filtered_transactions = filter_transactions_by_description(filtered_transactions, search_string)
 
@@ -72,5 +77,13 @@ def main():
                 )
 
 
+def count_transactions_by_category(transactions: list[dict], categories: list[str]) -> dict:
+    # Составляем список описаний операций, которые соответствуют заданным категориям
+    count_list = [trans.get("description") for trans in transactions if trans.get("description") in categories]
+
+    # Используем Counter для подсчета количества операций в каждой категории
+    return dict(Counter(count_list))
+
+
 if __name__ == "__main__":
-   main()
+    main()
